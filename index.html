@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<script>
-  // Apply theme before first paint to avoid a light-mode flash.
-  // Dark is the default unless the visitor previously chose light.
-  (function(){
-    try {
-      var stored = localStorage.getItem('theme');
-      if(stored !== 'light'){ document.documentElement.setAttribute('data-theme','dark'); }
-    } catch(e){ document.documentElement.setAttribute('data-theme','dark'); }
-  })();
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="dark light">
-<meta name="theme-color" content="#121314">
-<title>Tímea Szabó · Entry-Level Full-Stack Developer (ASP.NET Core &amp; Angular)</title>
-<meta name="description" content="Tímea Szabó, entry-level full-stack developer from Bács-Kiskun, Hungary. Certified Software Developer and Tester Technician. Available for hire.">
-<meta name="keywords" content="Tímea Szabó, full-stack developer, entry-level developer, ASP.NET Core, Angular, Hungary, junior developer, Kalocsa">
-<meta name="author" content="Tímea Szabó">
-<meta name="robots" content="index, follow">
-<meta property="og:type" content="profile">
-<meta property="og:title" content="Tímea Szabó · Entry-Level Full-Stack Developer">
-<meta property="og:description" content="Certified Software Developer and Tester Technician. Available for hire, see the Asset Manager project and full skill set.">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tímea Szabó · Entry-Level Full-Stack Developer">
-<meta name="twitter:description" content="ASP.NET Core and Angular developer, available for hire.">
-<script type="application/ld+json">
+  <meta charset="UTF-8">
+  <script>
+    // Apply theme before first paint to avoid a light-mode flash.
+    // Dark is the default unless the visitor previously chose light.
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        if (stored !== 'light') { document.documentElement.setAttribute('data-theme', 'dark'); }
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#121314">
+  <title>Tímea Szabó · Entry-Level Full-Stack Developer (ASP.NET Core &amp; Angular)</title>
+  <meta name="description"
+    content="Tímea Szabó, entry-level full-stack developer from Bács-Kiskun, Hungary. Certified Software Developer and Tester Technician. Available for hire.">
+  <meta name="keywords"
+    content="Tímea Szabó, full-stack developer, entry-level developer, ASP.NET Core, Angular, Hungary, junior developer, Kalocsa">
+  <meta name="author" content="Tímea Szabó">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Tímea Szabó · Entry-Level Full-Stack Developer">
+  <meta property="og:description"
+    content="Certified Software Developer and Tester Technician. Available for hire, see the Asset Manager project and full skill set.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tímea Szabó · Entry-Level Full-Stack Developer">
+  <meta name="twitter:description" content="ASP.NET Core and Angular developer, available for hire.">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -48,762 +52,1228 @@
   "knowsAbout": ["ASP.NET Core", "Angular", "C#", "SQL", "REST API"]
 }
 </script>
-<style>
-  :root{
-    color-scheme: light;
-    --paper:#F2F1EA;
-    --panel:#FFFFFF;
-    --line:#D9D6C9;
-    --ink:#1B1F1C;
-    --ink-soft:#4B5049;
-    --teal:#2F6F5E;
-    --teal-deep:#1F4E42;
-    --amber:#C97A2B;
-    --mono: 'IBM Plex Mono', 'Courier New', monospace;
-    --grotesk: 'Space Grotesk', 'Arial Narrow', sans-serif;
-    --sans: 'IBM Plex Sans', Arial, sans-serif;
-  }
-  html[data-theme="dark"]{
-    color-scheme: dark;
-    --paper:#14171A;
-    --panel:#1B1F22;
-    --line:#33383B;
-    --ink:#EDECE4;
-    --ink-soft:#9CA39B;
-    --teal:#4FA98C;
-    --teal-deep:#7FCBB0;
-    --amber:#E0954A;
-  }
-  @font-face{
-    font-family:'Space Grotesk';
-    src: local('Space Grotesk');
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--sans);
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-    transition:background .25s ease, color .25s ease;
-  }
-  html[data-theme="dark"] body{
-    background: linear-gradient(180deg, #1B2620 0%, #15211B 12%, #0F1613 32%, #101213 55%, #121314 100%);
-  }
-  a{color:inherit;}
-  ::selection{background:var(--teal); color:#fff;}
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #F2F1EA;
+      --panel: #FFFFFF;
+      --line: #D9D6C9;
+      --ink: #1B1F1C;
+      --ink-soft: #4B5049;
+      --teal: #2F6F5E;
+      --teal-deep: #1F4E42;
+      --amber: #C97A2B;
+      --mono: 'IBM Plex Mono', 'Courier New', monospace;
+      --grotesk: 'Space Grotesk', 'Arial Narrow', sans-serif;
+      --sans: 'IBM Plex Sans', Arial, sans-serif;
+    }
 
-  .wrap{max-width:960px; margin:0 auto; padding:0 28px;}
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --paper: #14171A;
+      --panel: #1B1F22;
+      --line: #33383B;
+      --ink: #EDECE4;
+      --ink-soft: #9CA39B;
+      --teal: #4FA98C;
+      --teal-deep: #7FCBB0;
+      --amber: #E0954A;
+    }
 
-  header{
-    border-bottom:1px solid var(--line);
-    padding:18px 0;
-  }
-  .tagbar{
-    display:flex; justify-content:space-between; align-items:center;
-    font-family:var(--mono); font-size:12.5px; color:var(--ink-soft);
-    letter-spacing:.02em;
-  }
-  .tagbar .id{color:var(--teal-deep); font-weight:600;}
-  .tagbar nav a{
-    margin-left:22px; text-decoration:none; color:var(--ink-soft);
-    border-bottom:1px solid transparent;
-  }
-  .tagbar nav a:hover{border-bottom-color:var(--teal); color:var(--ink);}
-  .tagbar nav{display:none;}
-  @media(min-width:640px){ .tagbar nav{display:block;} }
+    @font-face {
+      font-family: 'Space Grotesk';
+      src: local('Space Grotesk');
+    }
 
-  .hero{padding:64px 0 48px;}
-  .asset-record{
-    background:var(--panel);
-    border:1px solid var(--line);
-    position:relative;
-    padding:28px 30px 26px;
-  }
-  .asset-record::before{
-    content:"";
-    position:absolute; inset:6px;
-    border:1px dashed #C9C5B6;
-    pointer-events:none;
-  }
-  .record-row{
-    display:flex; justify-content:space-between; gap:12px;
-    font-family:var(--mono); font-size:11.5px; color:var(--ink-soft);
-    margin-bottom:22px; flex-wrap:wrap;
-  }
-  .record-row span b{color:var(--ink); font-weight:600;}
-  h1{
-    font-family:var(--grotesk);
-    font-size:clamp(34px, 6vw, 54px);
-    line-height:1.04;
-    margin:0 0 10px;
-    letter-spacing:-0.01em;
-  }
-  .role{
-    font-family:var(--grotesk);
-    color:var(--teal-deep);
-    font-size:19px;
-    margin:0 0 20px;
-  }
-  .intro{
-    max-width:60ch;
-    font-size:16px;
-    color:var(--ink-soft);
-    margin:0 0 26px;
-  }
-  .status-row{display:flex; flex-wrap:wrap; gap:10px;}
-  .status{
-    font-family:var(--mono); font-size:11.5px;
-    border:1px solid var(--line);
-    padding:5px 10px;
-    color:var(--ink-soft);
-    background:#FAF9F5;
-  }
-  .status.on{border-color:var(--teal); color:var(--teal-deep);}
-  .status.on::before{content:"● "; color:var(--teal);}
+    * {
+      box-sizing: border-box;
+    }
 
-  .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px;}
-  .btn{
-    font-family:var(--grotesk); font-size:14px; font-weight:600;
-    padding:10px 18px; text-decoration:none; display:inline-block;
-    border:1px solid var(--ink);
-  }
-  .btn.primary{background:var(--ink); color:var(--paper);}
-  .btn.primary:hover{background:var(--teal-deep); border-color:var(--teal-deep); color:#fff;}
-  .btn.ghost{color:var(--ink); border-color:var(--line);}
-  .btn.ghost:hover{border-color:var(--teal);}
+    html {
+      scroll-behavior: smooth;
+    }
 
-  section{padding:56px 0;}
-  section + section{border-top:1px solid var(--line);}
-  .section-head{
-    margin-bottom:30px;
-    padding-bottom:14px;
-    border-bottom:2px solid var(--ink);
-  }
-  h2{
-    font-family:var(--grotesk);
-    font-size:26px; margin:0; letter-spacing:-0.01em;
-  }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      transition: background .25s ease, color .25s ease;
+    }
 
-  .exhibit{
-    background:var(--panel);
-    border:1px solid var(--line);
-  }
-  .exhibit-top{
-    padding:26px 28px 22px;
-    border-bottom:1px solid var(--line);
-  }
-  .exhibit-title{
-    font-family:var(--grotesk); font-size:24px; margin:0 0 8px;
-  }
-  .exhibit-desc{color:var(--ink-soft); max-width:62ch; margin:0;}
+    html[data-theme="dark"] body {
+      background: linear-gradient(180deg, #1B2620 0%, #15211B 12%, #0F1613 32%, #101213 55%, #121314 100%);
+    }
 
-  .mock{
-    display:grid; grid-template-columns: 130px 1fr;
-    border-bottom:1px solid var(--line);
-    font-family:var(--mono); font-size:12px;
-  }
-  .mock-side{
-    border-right:1px solid var(--line);
-    padding:16px 14px;
-    color:var(--ink-soft);
-    background:#FAF9F5;
-  }
-  .mock-side div{padding:6px 0; opacity:.85;}
-  .mock-side .active{color:var(--teal-deep); font-weight:600;}
-  .mock-main{padding:16px 18px;}
-  .mock-table{width:100%; border-collapse:collapse;}
-  .mock-table th{
-    text-align:left; font-weight:600; color:var(--ink-soft);
-    border-bottom:1px solid var(--line); padding:6px 8px; font-size:11px;
-  }
-  .mock-table td{
-    padding:7px 8px; border-bottom:1px solid #EDEBE2; color:var(--ink);
-  }
-  .pill{
-    font-size:10.5px; padding:2px 7px; border:1px solid var(--line);
-  }
-  .pill.assigned{color:var(--teal-deep); border-color:var(--teal);}
-  .pill.stock{color:var(--amber); border-color:var(--amber);}
-  @media(max-width:600px){ .mock{grid-template-columns:1fr;} .mock-side{border-right:none; border-bottom:1px solid var(--line);} }
+    a {
+      color: inherit;
+    }
 
-  .exhibit-bottom{
-    padding:22px 28px 26px;
-    display:flex; flex-wrap:wrap; gap:8px 10px;
-    align-items:center; justify-content:space-between;
-  }
-  .stack{display:flex; flex-wrap:wrap; gap:8px;}
-  .chip{
-    font-family:var(--mono); font-size:11px;
-    border:1px solid var(--line); padding:4px 9px; color:var(--ink-soft);
-  }
-  .repo-link{
-    font-family:var(--grotesk); font-size:14px; font-weight:600;
-    color:var(--teal-deep); text-decoration:none;
-    border-bottom:1px solid var(--teal);
-    white-space:nowrap;
-  }
-  .repo-link:hover{color:var(--teal);}
+    ::selection {
+      background: var(--teal);
+      color: #fff;
+    }
 
-  .feature-list{
-    list-style:none; margin:0; padding:0 28px 26px;
-    border-top:1px solid var(--line);
-    display:grid; grid-template-columns:1fr 1fr; gap:0;
-  }
-  .feature-list li{
-    font-size:13.5px; color:var(--ink-soft);
-    padding:12px 14px 12px 14px;
-    border-bottom:1px dotted #DAD7CA;
-    border-left:2px solid var(--teal-deep);
-  }
-  @media(max-width:600px){ .feature-list{grid-template-columns:1fr;} }
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
 
-  /* ---------- Gallery (auto-scrolling marquee) ---------- */
-  .gallery-wrap{
-    overflow:hidden;
-    border:1px solid var(--line);
-    background:var(--panel);
-    position:relative;
-    padding:28px 0;
-  }
-  .gallery-wrap::before, .gallery-wrap::after{
-    content:""; position:absolute; top:0; bottom:0; width:70px; z-index:2;
-    pointer-events:none;
-  }
-  .gallery-wrap::before{ left:0; background:linear-gradient(90deg, var(--panel), transparent); }
-  .gallery-wrap::after{ right:0; background:linear-gradient(270deg, var(--panel), transparent); }
-  .gallery-track{
-    display:flex; align-items:flex-start; gap:26px; width:max-content;
-    animation: gallery-scroll 40s linear infinite;
-  }
-  .gallery-wrap:hover .gallery-track{ animation-play-state:paused; }
-  @keyframes gallery-scroll{
-    from{ transform:translateX(0); }
-    to{ transform:translateX(-50%); }
-  }
-  .gallery-frame{
-    flex:0 0 auto;
-    display:flex; flex-direction:column; align-items:center;
-  }
-  .gallery-frame .frame-plate{
-    border:1px solid var(--line);
-    border-top:3px solid var(--teal-deep);
-    background:#0E1012;
-    padding:6px;
-    line-height:0;
-    transition:border-color .2s ease, transform .2s ease;
-  }
-  .gallery-frame:hover .frame-plate{
-    border-color:var(--teal);
-    transform:translateY(-2px);
-  }
-  .gallery-frame img{
-    display:block;
-    height:190px;
-    width:auto;
-    max-width:380px;
-    cursor:zoom-in;
-  }
-  .gallery-caption{
-    font-family:var(--mono); font-size:11px; color:var(--ink-soft);
-    text-transform:uppercase; letter-spacing:.06em;
-    text-align:center;
-    margin-top:10px;
-  }
-  .gallery-note{
-    font-family:var(--mono); font-size:10.5px; color:var(--ink-soft);
-    padding:10px 4px 0; margin:0;
-  }
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+    }
 
-  /* ---------- Lightbox ---------- */
-  .lightbox{
-    position:fixed; inset:0; z-index:100;
-    background:rgba(10,11,10,.88);
-    display:none;
-    align-items:center; justify-content:center;
-    padding:40px 20px;
-  }
-  .lightbox.open{ display:flex; }
-  .lightbox img{
-    max-width:min(92vw, 1100px);
-    max-height:86vh;
-    width:auto; height:auto;
-    border:1px solid #3A403A;
-    box-shadow:0 20px 60px rgba(0,0,0,.5);
-  }
-  .lightbox-caption{
-    position:absolute; bottom:26px; left:0; right:0;
-    text-align:center;
-    font-family:var(--mono); font-size:11px; letter-spacing:.06em;
-    text-transform:uppercase; color:#CFCFC7;
-  }
-  .lightbox-close{
-    position:absolute; top:20px; right:26px;
-    font-family:var(--mono); font-size:13px;
-    background:transparent; border:1px solid #4A5049; color:#EDECE4;
-    padding:6px 12px; cursor:pointer;
-  }
-  .lightbox-close:hover{ border-color:#4FA98C; color:#7FCBB0; }
-  .lightbox-nav{
-    position:absolute; top:50%; transform:translateY(-50%);
-    font-family:var(--grotesk); font-size:22px; line-height:1;
-    background:transparent; border:1px solid #4A5049; color:#EDECE4;
-    width:46px; height:46px; cursor:pointer;
-    display:flex; align-items:center; justify-content:center;
-  }
-  .lightbox-nav:hover{ border-color:#4FA98C; color:#7FCBB0; }
-  .lightbox-nav.prev{ left:18px; }
-  .lightbox-nav.next{ right:18px; }
-  @media(max-width:640px){
-    .lightbox-nav{ width:38px; height:38px; font-size:18px; }
-    .lightbox-nav.prev{ left:6px; }
-    .lightbox-nav.next{ right:6px; }
-  }
+    .tagbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      letter-spacing: .02em;
+    }
 
-  .contact-record{
-    background:var(--panel); color:var(--ink);
-    border:1px solid var(--line);
-    padding:36px 30px; position:relative;
-  }
-  .contact-record h2{color:var(--ink);}
-  .contact-record .contact-lede{color:var(--ink-soft); max-width:56ch; margin:8px 0 0;}
-  .contact-grid{
-    display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
-    gap:14px; margin-top:26px;
-  }
-  .contact-card{
-    border:1px solid var(--line); padding:16px 16px;
-  }
-  .contact-card .k{
-    font-family:var(--mono); font-size:10.5px; color:var(--teal-deep);
-    text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px;
-  }
-  .contact-card a{
-    font-family:var(--grotesk); font-size:15px; font-weight:600;
-    text-decoration:none; color:var(--ink); border-bottom:1px solid var(--line);
-  }
-  .contact-card a:hover{border-color:var(--teal); color:var(--teal-deep);}
-  .contact-card span{color:var(--ink);}
+    .tagbar .id {
+      color: var(--teal-deep);
+      font-weight: 600;
+    }
 
-  .ledger{border-top:1px solid var(--line);}
-  .ledger-row{
-    display:grid; grid-template-columns:180px 1fr;
-    border-bottom:1px solid var(--line);
-    padding:16px 0;
-    gap:10px;
-  }
-  .ledger-row .cat{
-    font-family:var(--mono); font-size:12px; color:var(--ink-soft);
-    padding-top:2px;
-  }
-  .ledger-row .items{display:flex; flex-wrap:wrap; gap:8px;}
-  .ledger-row .items span{
-    font-size:13.5px; padding:4px 10px;
-    background:var(--panel); border:1px solid var(--line);
-  }
-  @media(max-width:600px){ .ledger-row{grid-template-columns:1fr; gap:6px;} }
+    .tagbar nav a {
+      margin-left: 22px;
+      text-decoration: none;
+      color: var(--ink-soft);
+      border-bottom: 1px solid transparent;
+    }
 
-  .tl-row{
-    display:grid; grid-template-columns:90px 1fr;
-    gap:16px; padding:18px 0;
-    border-bottom:1px solid var(--line);
-  }
-  .tl-row:first-child{border-top:1px solid var(--line);}
-  .tl-year{font-family:var(--mono); color:var(--teal-deep); font-size:13px; padding-top:2px;}
-  .tl-title{font-family:var(--grotesk); font-size:16px; margin:0 0 4px;}
-  .tl-sub{color:var(--ink-soft); font-size:13.5px; margin:0;}
+    .tagbar nav a:hover {
+      border-bottom-color: var(--teal);
+      color: var(--ink);
+    }
 
-  footer{padding:30px 0 44px;}
-  .foot-note{
-    font-family:var(--mono); font-size:11px; color:var(--ink-soft);
-    text-align:center; margin:0;
-  }
+    .tagbar nav {
+      display: none;
+    }
 
-  html[data-theme="dark"] .asset-record::before{border-color:#3A403A;}
-  html[data-theme="dark"] .mock-side{background:#202427;}
-  html[data-theme="dark"] .mock-table td{border-bottom-color:#2A2F32;}
-  html[data-theme="dark"] .feature-list li{border-bottom-color:#2A2F32;}
-  html[data-theme="dark"] .status{background:#202427;}
-  html[data-theme="dark"] .section-head{border-bottom-color:#3A403A;}
+    @media(min-width:640px) {
+      .tagbar nav {
+        display: block;
+      }
+    }
 
-  .theme-toggle{
-    font-family:var(--mono); font-size:11.5px;
-    border:1px solid var(--line); background:transparent; color:var(--ink-soft);
-    padding:5px 10px; cursor:pointer; margin-left:22px;
-  }
-  .theme-toggle:hover{border-color:var(--teal); color:var(--ink);}
-</style>
+    .hero {
+      padding: 64px 0 48px;
+    }
+
+    .asset-record {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      position: relative;
+      padding: 28px 30px 26px;
+    }
+
+    .asset-record::before {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border: 1px dashed #C9C5B6;
+      pointer-events: none;
+    }
+
+    .record-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--ink-soft);
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .record-row span b {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: var(--grotesk);
+      font-size: clamp(34px, 6vw, 54px);
+      line-height: 1.04;
+      margin: 0 0 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .role {
+      font-family: var(--grotesk);
+      color: var(--teal-deep);
+      font-size: 19px;
+      margin: 0 0 20px;
+    }
+
+    .intro {
+      max-width: 60ch;
+      font-size: 16px;
+      color: var(--ink-soft);
+      margin: 0 0 26px;
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .status {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      border: 1px solid var(--line);
+      padding: 5px 10px;
+      color: var(--ink-soft);
+      background: #FAF9F5;
+    }
+
+    .status.on {
+      border-color: var(--teal);
+      color: var(--teal-deep);
+    }
+
+    .status.on::before {
+      content: "● ";
+      color: var(--teal);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      font-family: var(--grotesk);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 18px;
+      text-decoration: none;
+      display: inline-block;
+      border: 1px solid var(--ink);
+    }
+
+    .btn.primary {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .btn.primary:hover {
+      background: var(--teal-deep);
+      border-color: var(--teal-deep);
+      color: #fff;
+    }
+
+    .btn.ghost {
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    .btn.ghost:hover {
+      border-color: var(--teal);
+    }
+
+    section {
+      padding: 56px 0;
+    }
+
+    section+section {
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      margin-bottom: 30px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    h2 {
+      font-family: var(--grotesk);
+      font-size: 26px;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .exhibit {
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .exhibit-top {
+      padding: 26px 28px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .exhibit-title {
+      font-family: var(--grotesk);
+      font-size: 24px;
+      margin: 0 0 8px;
+    }
+
+    .exhibit-desc {
+      color: var(--ink-soft);
+      max-width: 62ch;
+      margin: 0;
+    }
+
+    .mock {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      border-bottom: 1px solid var(--line);
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    .mock-side {
+      border-right: 1px solid var(--line);
+      padding: 16px 14px;
+      color: var(--ink-soft);
+      background: #FAF9F5;
+    }
+
+    .mock-side div {
+      padding: 6px 0;
+      opacity: .85;
+    }
+
+    .mock-side .active {
+      color: var(--teal-deep);
+      font-weight: 600;
+    }
+
+    .mock-main {
+      padding: 16px 18px;
+    }
+
+    .mock-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .mock-table th {
+      text-align: left;
+      font-weight: 600;
+      color: var(--ink-soft);
+      border-bottom: 1px solid var(--line);
+      padding: 6px 8px;
+      font-size: 11px;
+    }
+
+    .mock-table td {
+      padding: 7px 8px;
+      border-bottom: 1px solid #EDEBE2;
+      color: var(--ink);
+    }
+
+    .pill {
+      font-size: 10.5px;
+      padding: 2px 7px;
+      border: 1px solid var(--line);
+    }
+
+    .pill.assigned {
+      color: var(--teal-deep);
+      border-color: var(--teal);
+    }
+
+    .pill.stock {
+      color: var(--amber);
+      border-color: var(--amber);
+    }
+
+    @media(max-width:600px) {
+      .mock {
+        grid-template-columns: 1fr;
+      }
+
+      .mock-side {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+    }
+
+    .exhibit-bottom {
+      padding: 22px 28px 26px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      font-family: var(--mono);
+      font-size: 11px;
+      border: 1px solid var(--line);
+      padding: 4px 9px;
+      color: var(--ink-soft);
+    }
+
+    .repo-link {
+      font-family: var(--grotesk);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      text-decoration: none;
+      border-bottom: 1px solid var(--teal);
+      white-space: nowrap;
+    }
+
+    .repo-link:hover {
+      color: var(--teal);
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 0;
+      padding: 0 28px 26px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .feature-list li {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      padding: 12px 14px 12px 14px;
+      border-bottom: 1px dotted #DAD7CA;
+      border-left: 2px solid var(--teal-deep);
+    }
+
+    @media(max-width:600px) {
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ---------- Gallery (auto-scrolling marquee) ---------- */
+    .gallery-wrap {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      position: relative;
+      padding: 28px 0;
+    }
+
+    .gallery-wrap::before,
+    .gallery-wrap::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 70px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .gallery-wrap::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--panel), transparent);
+    }
+
+    .gallery-wrap::after {
+      right: 0;
+      background: linear-gradient(270deg, var(--panel), transparent);
+    }
+
+    .gallery-track {
+      display: flex;
+      align-items: flex-start;
+      gap: 26px;
+      width: max-content;
+      animation: gallery-scroll 40s linear infinite;
+    }
+
+    .gallery-wrap:hover .gallery-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes gallery-scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .gallery-frame {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gallery-frame .frame-plate {
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--teal-deep);
+      background: #0E1012;
+      padding: 6px;
+      line-height: 0;
+      transition: border-color .2s ease, transform .2s ease;
+    }
+
+    .gallery-frame:hover .frame-plate {
+      border-color: var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .gallery-frame img {
+      display: block;
+      height: 190px;
+      width: auto;
+      max-width: 380px;
+      cursor: zoom-in;
+    }
+
+    .gallery-caption {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .gallery-note {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      color: var(--ink-soft);
+      padding: 10px 4px 0;
+      margin: 0;
+    }
+
+    /* ---------- Lightbox ---------- */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(10, 11, 10, .88);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: min(92vw, 1100px);
+      max-height: 86vh;
+      width: auto;
+      height: auto;
+      border: 1px solid #3A403A;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+    }
+
+    .lightbox-caption {
+      position: absolute;
+      bottom: 26px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #CFCFC7;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 26px;
+      font-family: var(--mono);
+      font-size: 13px;
+      background: transparent;
+      border: 1px solid #4A5049;
+      color: #EDECE4;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+
+    .lightbox-close:hover {
+      border-color: #4FA98C;
+      color: #7FCBB0;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--grotesk);
+      font-size: 22px;
+      line-height: 1;
+      background: transparent;
+      border: 1px solid #4A5049;
+      color: #EDECE4;
+      width: 46px;
+      height: 46px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-nav:hover {
+      border-color: #4FA98C;
+      color: #7FCBB0;
+    }
+
+    .lightbox-nav.prev {
+      left: 18px;
+    }
+
+    .lightbox-nav.next {
+      right: 18px;
+    }
+
+    @media(max-width:640px) {
+      .lightbox-nav {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+      }
+
+      .lightbox-nav.prev {
+        left: 6px;
+      }
+
+      .lightbox-nav.next {
+        right: 6px;
+      }
+    }
+
+    .contact-record {
+      background: var(--panel);
+      color: var(--ink);
+      border: 1px solid var(--line);
+      padding: 36px 30px;
+      position: relative;
+    }
+
+    .contact-record h2 {
+      color: var(--ink);
+    }
+
+    .contact-record .contact-lede {
+      color: var(--ink-soft);
+      max-width: 56ch;
+      margin: 8px 0 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .contact-card {
+      border: 1px solid var(--line);
+      padding: 16px 16px;
+    }
+
+    .contact-card .k {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      color: var(--teal-deep);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 8px;
+    }
+
+    .contact-card a {
+      font-family: var(--grotesk);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-card a:hover {
+      border-color: var(--teal);
+      color: var(--teal-deep);
+    }
+
+    .contact-card span {
+      color: var(--ink);
+    }
+
+    .ledger {
+      border-top: 1px solid var(--line);
+    }
+
+    .ledger-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      border-bottom: 1px solid var(--line);
+      padding: 16px 0;
+      gap: 10px;
+    }
+
+    .ledger-row .cat {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink-soft);
+      padding-top: 2px;
+    }
+
+    .ledger-row .items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .ledger-row .items span {
+      font-size: 13.5px;
+      padding: 4px 10px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    @media(max-width:600px) {
+      .ledger-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+    }
+
+    .tl-row {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .tl-row:first-child {
+      border-top: 1px solid var(--line);
+    }
+
+    .tl-year {
+      font-family: var(--mono);
+      color: var(--teal-deep);
+      font-size: 13px;
+      padding-top: 2px;
+    }
+
+    .tl-title {
+      font-family: var(--grotesk);
+      font-size: 16px;
+      margin: 0 0 4px;
+    }
+
+    .tl-sub {
+      color: var(--ink-soft);
+      font-size: 13.5px;
+      margin: 0;
+    }
+
+    footer {
+      padding: 30px 0 44px;
+    }
+
+    .foot-note {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-soft);
+      text-align: center;
+      margin: 0;
+    }
+
+    html[data-theme="dark"] .asset-record::before {
+      border-color: #3A403A;
+    }
+
+    html[data-theme="dark"] .mock-side {
+      background: #202427;
+    }
+
+    html[data-theme="dark"] .mock-table td {
+      border-bottom-color: #2A2F32;
+    }
+
+    html[data-theme="dark"] .feature-list li {
+      border-bottom-color: #2A2F32;
+    }
+
+    html[data-theme="dark"] .status {
+      background: #202427;
+    }
+
+    html[data-theme="dark"] .section-head {
+      border-bottom-color: #3A403A;
+    }
+
+    .theme-toggle {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--ink-soft);
+      padding: 5px 10px;
+      cursor: pointer;
+      margin-left: 22px;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--teal);
+      color: var(--ink);
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="wrap tagbar">
-    <div>ASSET&nbsp;<span class="id">DEV-TSZABO-2026</span></div>
-    <div style="display:flex; align-items:center;">
-      <nav>
-        <a href="#gallery">Gallery</a>
-        <a href="#project">Project</a>
-        <a href="#contact">Contact</a>
-        <a href="#skills">Skills</a>
-        <a href="#background">Background</a>
-      </nav>
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">LIGHT</button>
+  <header>
+    <div class="wrap tagbar">
+      <div>ASSET&nbsp;<span class="id">DEV-TSZABO-2026</span></div>
+      <div style="display:flex; align-items:center;">
+        <nav>
+          <a href="#gallery">Gallery</a>
+          <a href="#project">Project</a>
+          <a href="#contact">Contact</a>
+          <a href="#skills">Skills</a>
+          <a href="#background">Background</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">LIGHT</button>
+      </div>
     </div>
+  </header>
+
+  <div class="wrap">
+
+    <section class="hero">
+      <div class="asset-record">
+        <div class="record-row">
+          <span>REGISTER&nbsp;NO. <b>SD-2026-0142</b></span>
+          <span>STATUS <b>AVAILABLE FOR HIRE</b></span>
+          <span>LOCATION <b>Bács-Kiskun, Hungary</b></span>
+        </div>
+        <h1>Tímea Szabó</h1>
+        <p class="role">Entry-level Full-stack Developer, ASP.NET Core &amp; Angular</p>
+        <p class="intro">I build web applications end to end: REST APIs, SQL-backed data models, and the Angular
+          interfaces on top of them. Trained through a five-year Software Development and Testing programme, I'm now
+          looking to bring that to a real product team.</p>
+        <div class="status-row">
+          <span class="status on">C# / .NET / ASP.NET Core</span>
+          <span class="status on">Angular</span>
+          <span class="status">SQL</span>
+          <span class="status">REST API</span>
+          <span class="status">Git &amp; GitHub</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn ghost" href="#project">See the project</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="section-head">
+        <h2>Gallery</h2>
+        <p style="font-size:15px; color:var(--ink-soft); margin:10px 0 0;">Click any screenshot to see it up close.</p>
+      </div>
+      <div class="gallery-wrap">
+        <div class="gallery-track">
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/login.png" alt="Login screenshot" loading="lazy"></div>
+            <div class="gallery-caption">Login</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/employee.png" alt="Employees screenshot" loading="lazy"></div>
+            <div class="gallery-caption">Employees</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/employeedit.png" alt="Update employee screenshot" loading="lazy">
+            </div>
+            <div class="gallery-caption">Update employee</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/employeeedit.png" alt="Edit employee screenshot" loading="lazy">
+            </div>
+            <div class="gallery-caption">Edit employee</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/employeedelete.png" alt="Delete employee screenshot"
+                loading="lazy"></div>
+            <div class="gallery-caption">Delete employee</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/employees.png" alt="Employees screenshot" loading="lazy"></div>
+            <div class="gallery-caption">Employees</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/manageassets.png" alt="Manage assets screenshot" loading="lazy">
+            </div>
+            <div class="gallery-caption">Manage assets</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/inventorybefore.png" alt="Inventory screenshot" loading="lazy">
+            </div>
+            <div class="gallery-caption">Inventory</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/inventorybeforeupdate.png" alt="Update inventory screenshot"
+                loading="lazy"></div>
+            <div class="gallery-caption">Update inventory</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/itemupdate.png" alt="Edit inventory item screenshot"
+                loading="lazy"></div>
+            <div class="gallery-caption">Edit inventory item</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/whitemode.png" alt="Light mode screenshot" loading="lazy"></div>
+            <div class="gallery-caption">Light mode</div>
+          </div>
+          <!-- duplicate set for a seamless loop -->
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/login.png" alt="Login screenshot" loading="lazy"></div>
+            <div class="gallery-caption">Login</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/employee.png" alt="Employees screenshot" loading="lazy"></div>
+            <div class="gallery-caption">Employees</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/employeedit.png" alt="Update employee screenshot" loading="lazy">
+            </div>
+            <div class="gallery-caption">Update employee</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/employeeedit.png" alt="Edit employee screenshot" loading="lazy">
+            </div>
+            <div class="gallery-caption">Edit employee</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/employeedelete.png" alt="Delete employee screenshot"
+                loading="lazy"></div>
+            <div class="gallery-caption">Delete employee</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/employees.png" alt="Employees screenshot" loading="lazy"></div>
+            <div class="gallery-caption">Employees</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/manageassets.png" alt="Manage assets screenshot" loading="lazy">
+            </div>
+            <div class="gallery-caption">Manage assets</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/inventorybefore.png" alt="Inventory screenshot" loading="lazy">
+            </div>
+            <div class="gallery-caption">Inventory</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/inventorybeforeupdate.png" alt="Update inventory screenshot"
+                loading="lazy"></div>
+            <div class="gallery-caption">Update inventory</div>
+          </div>
+          <div class="gallery-frame">
+            <div class="frame-plate"><img src="gallery/itemupdate.png" alt="Edit inventory item screenshot"
+                loading="lazy"></div>
+            <div class="gallery-caption">Edit inventory item</div>
+          </div>
+
+        </div>
+        <div class="gallery-frame">
+          <div class="frame-plate"><img src="gallery/whitemode.png" alt="Light mode screenshot" loading="lazy"></div>
+          <div class="gallery-caption">Light mode</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="project">
+      <div class="section-head">
+        <h2>Featured project</h2>
+      </div>
+
+      <div class="exhibit">
+        <div class="exhibit-top">
+          <h3 class="exhibit-title">Asset Manager</h3>
+          <p class="exhibit-desc">An IT asset management system that tracks company hardware and which employee it is
+            assigned to, built as an ASP.NET Core Web API with an Angular front end.</p>
+        </div>
+
+        <div class="mock">
+          <div class="mock-side">
+            <div class="active">Dashboard</div>
+            <div>Assets</div>
+            <div>Employees</div>
+            <div>Assignments</div>
+            <div>Users</div>
+          </div>
+          <div class="mock-main">
+            <table class="mock-table">
+              <tr>
+                <th>Asset</th>
+                <th>Tag</th>
+                <th>Assigned to</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>Laptop</td>
+                <td>LAP-0231</td>
+                <td>Employee A</td>
+                <td><span class="pill assigned">assigned</span></td>
+              </tr>
+              <tr>
+                <td>Mouse</td>
+                <td>PRF-0119</td>
+                <td>Unassigned</td>
+                <td><span class="pill stock">in stock</span></td>
+              </tr>
+              <tr>
+                <td>Phone</td>
+                <td>MOB-0087</td>
+                <td>Employee B</td>
+                <td><span class="pill assigned">assigned</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <p
+          style="font-family:var(--mono); font-size:10.5px; color:var(--ink-soft); padding:8px 28px; margin:0; border-bottom:1px solid var(--line);">
+          Illustrative concept of the asset/assignment structure, not a screenshot of the live app.</p>
+
+        <ul class="feature-list">
+          <li>ASP.NET Core Web API backend</li>
+          <li>Angular front end</li>
+          <li>Tracks IT assets and which employee each one is assigned to</li>
+          <li>Organised as separate API and UI projects in the same repository</li>
+        </ul>
+
+        <div class="exhibit-bottom">
+          <div class="stack">
+            <span class="chip">ASP.NET Core</span>
+            <span class="chip">Angular</span>
+            <span class="chip">C#</span>
+            <span class="chip">REST API</span>
+          </div>
+          <a class="repo-link" href="https://github.com/TSzabo1222/AssetManager.Api" target="_blank" rel="noopener">View
+            source on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-record">
+        <h2>Let's talk about a role</h2>
+        <p class="contact-lede">I'm looking for my first developer position. Happy to walk through the AssetManager
+          project or anything else on my CV.</p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="k">Email</div>
+            <a href="mailto:szabotimi1222@gmail.com">szabotimi1222@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <div class="k">Phone</div>
+            <a href="tel:+36302830807">+36 30 283 0807</a>
+          </div>
+          <div class="contact-card">
+            <div class="k">GitHub</div>
+            <a href="https://github.com/TSzabo1222" target="_blank" rel="noopener">TSzabo1222</a>
+          </div>
+          <div class="contact-card">
+            <div class="k">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/t%C3%ADmea-szab%C3%B3-143aab2b4/" target="_blank" rel="noopener">Tímea
+              Szabó</a>
+          </div>
+          <div class="contact-card">
+            <div class="k">Location</div>
+            <span style="font-family:var(--grotesk); font-size:15px; font-weight:600;">Bács-Kiskun, Hungary</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-head">
+        <h2>Skills inventory</h2>
+      </div>
+      <div class="ledger">
+        <div class="ledger-row">
+          <div class="cat">Languages</div>
+          <div class="items"><span>C#</span><span>SQL</span></div>
+        </div>
+        <div class="ledger-row">
+          <div class="cat">Frameworks</div>
+          <div class="items"><span>.NET / ASP.NET
+              Core</span><span>Angular</span><span>Express.js</span><span>Bootstrap</span></div>
+        </div>
+        <div class="ledger-row">
+          <div class="cat">Web &amp; data</div>
+          <div class="items"><span>REST API</span><span>HTML5</span><span>CSS3</span><span>JSON</span></div>
+        </div>
+        <div class="ledger-row">
+          <div class="cat">Tools</div>
+          <div class="items"><span>Git</span><span>GitHub</span><span>Postman</span><span>Visual Studio</span><span>VS
+              Code</span><span>Jira</span><span>Kanban</span><span>Karma</span></div>
+        </div>
+        <div class="ledger-row">
+          <div class="cat">Practice</div>
+          <div class="items"><span>CRUD operations</span><span>Admin panel development</span><span>Responsive web
+              design</span><span>Database design</span><span>Client-server architecture</span><span>Technical
+              documentation</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="background">
+      <div class="section-head">
+        <h2>Background</h2>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-year">2026</div>
+        <div>
+          <p class="tl-title">Certified Software Developer and Tester Technician</p>
+          <p class="tl-sub">Kalocsa Vocational Training Centre, Dózsa György Technical School and Dormitory.
+            Hungarian/European Qualifications Framework Level 5, Digital Competence Framework Level 8. Secondary School
+            Leaving Certificate (Matura), five examination subjects.</p>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year">2023</div>
+        <div>
+          <p class="tl-title">Sectoral Basic Examination: IT &amp; Telecommunications Fundamentals</p>
+          <p class="tl-sub">Home and small-business network design and simulation in Cisco Packet Tracer; website
+            development and coding; fundamentals of Python programming.</p>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year">2022</div>
+        <div>
+          <p class="tl-title">PAR 4.0 Foundation Training</p>
+          <p class="tl-sub">Closed electronic distance-learning programme under the GINOP-6.1.10-VEKOP-19-2020-00002
+            priority project.</p>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year"></div>
+        <div>
+          <p class="tl-title">Languages</p>
+          <p class="tl-sub">Hungarian (native); English: B1 (Intermediate)</p>
+        </div>
+      </div>
+    </section>
+
   </div>
-</header>
 
-<div class="wrap">
+  <footer>
+    <p class="foot-note">Updated 2026. Built as a static page, deployable via GitHub Pages.</p>
+  </footer>
 
-  <section class="hero">
-    <div class="asset-record">
-      <div class="record-row">
-        <span>REGISTER&nbsp;NO. <b>SD-2026-0142</b></span>
-        <span>STATUS <b>AVAILABLE FOR HIRE</b></span>
-        <span>LOCATION <b>Bács-Kiskun, Hungary</b></span>
-      </div>
-      <h1>Tímea Szabó</h1>
-      <p class="role">Entry-level Full-stack Developer, ASP.NET Core &amp; Angular</p>
-      <p class="intro">I build web applications end to end: REST APIs, SQL-backed data models, and the Angular interfaces on top of them. Trained through a five-year Software Development and Testing programme, I'm now looking to bring that to a real product team.</p>
-      <div class="status-row">
-        <span class="status on">C# / .NET / ASP.NET Core</span>
-        <span class="status on">Angular</span>
-        <span class="status">SQL</span>
-        <span class="status">REST API</span>
-        <span class="status">Git &amp; GitHub</span>
-      </div>
-      <div class="hero-actions">
-        <a class="btn primary" href="#contact">Get in touch</a>
-        <a class="btn ghost" href="#project">See the project</a>
-      </div>
-    </div>
-  </section>
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" type="button">CLOSE ✕</button>
+    <button class="lightbox-nav prev" id="lightboxPrev" type="button" aria-label="Previous image">‹</button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-nav next" id="lightboxNext" type="button" aria-label="Next image">›</button>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
 
-  <section id="gallery">
-    <div class="section-head">
-      <h2>Gallery</h2>
-      <p style="font-size:15px; color:var(--ink-soft); margin:10px 0 0;">Click any screenshot to see it up close.</p>
-    </div>
-    <div class="gallery-wrap">
-      <div class="gallery-track">
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/login.png" alt="Login screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Login</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/employee.png" alt="Employees screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Employees</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/employeedit.png" alt="Update employee screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Update employee</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/employeeedit.png" alt="Edit employee screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Edit employee</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/employeedelete.png" alt="Delete employee screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Delete employee</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/employees.png" alt="Employees screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Employees</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/manageassets.png" alt="Manage assets screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Manage assets</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/inventorybefore.png" alt="Inventory screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Inventory</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/inventorybeforeupdate.png" alt="Update inventory screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Update inventory</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/itemupdate.png" alt="Edit inventory item screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Edit inventory item</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/whitemode.png" alt="Light mode screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Light mode</div>
-        </div>
-        <!-- duplicate set for a seamless loop -->
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/login.png" alt="Login screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Login</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/employee.png" alt="Employees screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Employees</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/employeedit.png" alt="Update employee screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Update employee</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/employeeedit.png" alt="Edit employee screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Edit employee</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/employeedelete.png" alt="Delete employee screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Delete employee</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/employees.png" alt="Employees screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Employees</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/manageassets.png" alt="Manage assets screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Manage assets</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/inventorybefore.png" alt="Inventory screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Inventory</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/inventorybeforeupdate.png" alt="Update inventory screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Update inventory</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/itemupdate.png" alt="Edit inventory item screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Edit inventory item</div>
-        </div>
-        <div class="gallery-frame">
-          <div class="frame-plate"><img src="gallery/whitemode.png" alt="Light mode screenshot" loading="lazy"></div>
-          <div class="gallery-caption">Light mode</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById('themeToggle');
 
-  <section id="project">
-    <div class="section-head"><h2>Featured project</h2></div>
+      syncButton();
 
-    <div class="exhibit">
-      <div class="exhibit-top">
-        <h3 class="exhibit-title">Asset Manager</h3>
-        <p class="exhibit-desc">An IT asset management system that tracks company hardware and which employee it is assigned to, built as an ASP.NET Core Web API with an Angular front end.</p>
-      </div>
+      btn.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        if (next === 'dark') { root.setAttribute('data-theme', 'dark'); }
+        else { root.removeAttribute('data-theme'); }
+        try { localStorage.setItem('theme', next); } catch (e) { }
+        syncButton();
+      });
 
-      <div class="mock">
-        <div class="mock-side">
-          <div class="active">Dashboard</div>
-          <div>Assets</div>
-          <div>Employees</div>
-          <div>Assignments</div>
-          <div>Users</div>
-        </div>
-        <div class="mock-main">
-          <table class="mock-table">
-            <tr><th>Asset</th><th>Tag</th><th>Assigned to</th><th>Status</th></tr>
-            <tr><td>Laptop</td><td>LAP-0231</td><td>Employee A</td><td><span class="pill assigned">assigned</span></td></tr>
-            <tr><td>Mouse</td><td>PRF-0119</td><td>Unassigned</td><td><span class="pill stock">in stock</span></td></tr>
-            <tr><td>Phone</td><td>MOB-0087</td><td>Employee B</td><td><span class="pill assigned">assigned</span></td></tr>
-          </table>
-        </div>
-      </div>
-      <p style="font-family:var(--mono); font-size:10.5px; color:var(--ink-soft); padding:8px 28px; margin:0; border-bottom:1px solid var(--line);">Illustrative concept of the asset/assignment structure, not a screenshot of the live app.</p>
+      function syncButton() {
+        btn.textContent = root.getAttribute('data-theme') === 'dark' ? 'LIGHT' : 'DARK';
+      }
+    })();
 
-      <ul class="feature-list">
-        <li>ASP.NET Core Web API backend</li>
-        <li>Angular front end</li>
-        <li>Tracks IT assets and which employee each one is assigned to</li>
-        <li>Organised as separate API and UI projects in the same repository</li>
-      </ul>
+    (function () {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightboxImg');
+      var lightboxCaption = document.getElementById('lightboxCaption');
+      var closeBtn = document.getElementById('lightboxClose');
+      var prevBtn = document.getElementById('lightboxPrev');
+      var nextBtn = document.getElementById('lightboxNext');
 
-      <div class="exhibit-bottom">
-        <div class="stack">
-          <span class="chip">ASP.NET Core</span>
-          <span class="chip">Angular</span>
-          <span class="chip">C#</span>
-          <span class="chip">REST API</span>
-        </div>
-        <a class="repo-link" href="https://github.com/TSzabo1222/AssetManager.Api" target="_blank" rel="noopener">View source on GitHub</a>
-      </div>
-    </div>
-  </section>
+      // Build a deduplicated, ordered list from the gallery (it contains
+      // the image set twice, back to back, for the seamless marquee loop).
+      var items = [];
+      var seen = {};
+      document.querySelectorAll('.gallery-frame img').forEach(function (img) {
+        if (!seen[img.src]) {
+          seen[img.src] = true;
+          var caption = img.closest('.gallery-frame').querySelector('.gallery-caption');
+          items.push({ src: img.src, alt: img.alt, caption: caption ? caption.textContent : '' });
+        }
+      });
 
-  <section id="contact">
-    <div class="section-head"><h2>Contact</h2></div>
-    <div class="contact-record">
-      <h2>Let's talk about a role</h2>
-      <p class="contact-lede">I'm looking for my first developer position. Happy to walk through the AssetManager project or anything else on my CV.</p>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="k">Email</div>
-          <a href="mailto:szabotimi1222@gmail.com">szabotimi1222@gmail.com</a>
-        </div>
-        <div class="contact-card">
-          <div class="k">Phone</div>
-          <a href="tel:+36302830807">+36 30 283 0807</a>
-        </div>
-        <div class="contact-card">
-          <div class="k">GitHub</div>
-          <a href="https://github.com/TSzabo1222" target="_blank" rel="noopener">TSzabo1222</a>
-        </div>
-        <div class="contact-card">
-          <div class="k">LinkedIn</div>
-          <a href="https://www.linkedin.com/in/t%C3%ADmea-szab%C3%B3-143aab2b4/" target="_blank" rel="noopener">Tímea Szabó</a>
-        </div>
-        <div class="contact-card">
-          <div class="k">Location</div>
-          <span style="font-family:var(--grotesk); font-size:15px; font-weight:600;">Bács-Kiskun, Hungary</span>
-        </div>
-      </div>
-    </div>
-  </section>
+      var current = 0;
 
-  <section id="skills">
-    <div class="section-head"><h2>Skills inventory</h2></div>
-    <div class="ledger">
-      <div class="ledger-row">
-        <div class="cat">Languages</div>
-        <div class="items"><span>C#</span><span>SQL</span></div>
-      </div>
-      <div class="ledger-row">
-        <div class="cat">Frameworks</div>
-        <div class="items"><span>.NET / ASP.NET Core</span><span>Angular</span><span>Express.js</span><span>Bootstrap</span></div>
-      </div>
-      <div class="ledger-row">
-        <div class="cat">Web &amp; data</div>
-        <div class="items"><span>REST API</span><span>HTML5</span><span>CSS3</span><span>JSON</span></div>
-      </div>
-      <div class="ledger-row">
-        <div class="cat">Tools</div>
-        <div class="items"><span>Git</span><span>GitHub</span><span>Postman</span><span>Visual Studio</span><span>VS Code</span><span>Jira</span><span>Kanban</span><span>Karma</span></div>
-      </div>
-      <div class="ledger-row">
-        <div class="cat">Practice</div>
-        <div class="items"><span>CRUD operations</span><span>Admin panel development</span><span>Responsive web design</span><span>Database design</span><span>Client-server architecture</span><span>Technical documentation</span></div>
-      </div>
-    </div>
-  </section>
+      function show(index) {
+        current = (index + items.length) % items.length;
+        var item = items[current];
+        lightboxImg.src = item.src;
+        lightboxImg.alt = item.alt;
+        lightboxCaption.textContent = item.caption;
+      }
 
-  <section id="background">
-    <div class="section-head"><h2>Background</h2></div>
+      document.querySelectorAll('.gallery-frame img').forEach(function (img) {
+        img.addEventListener('click', function () {
+          var index = items.findIndex(function (it) { return it.src === img.src; });
+          show(index);
+          lightbox.classList.add('open');
+        });
+      });
 
-    <div class="tl-row">
-      <div class="tl-year">2026</div>
-      <div>
-        <p class="tl-title">Certified Software Developer and Tester Technician</p>
-        <p class="tl-sub">Kalocsa Vocational Training Centre, Dózsa György Technical School and Dormitory. Hungarian/European Qualifications Framework Level 5, Digital Competence Framework Level 8. Secondary School Leaving Certificate (Matura), five examination subjects.</p>
-      </div>
-    </div>
-    <div class="tl-row">
-      <div class="tl-year">2023</div>
-      <div>
-        <p class="tl-title">Sectoral Basic Examination: IT &amp; Telecommunications Fundamentals</p>
-        <p class="tl-sub">Home and small-business network design and simulation in Cisco Packet Tracer; website development and coding; fundamentals of Python programming.</p>
-      </div>
-    </div>
-    <div class="tl-row">
-      <div class="tl-year">2022</div>
-      <div>
-        <p class="tl-title">PAR 4.0 Foundation Training</p>
-        <p class="tl-sub">Closed electronic distance-learning programme under the GINOP-6.1.10-VEKOP-19-2020-00002 priority project.</p>
-      </div>
-    </div>
-    <div class="tl-row">
-      <div class="tl-year"></div>
-      <div>
-        <p class="tl-title">Languages</p>
-        <p class="tl-sub">Hungarian (native); English: B1 (Intermediate)</p>
-      </div>
-    </div>
-  </section>
+      function closeLightbox() { lightbox.classList.remove('open'); lightboxImg.src = ''; }
 
-</div>
+      closeBtn.addEventListener('click', closeLightbox);
+      prevBtn.addEventListener('click', function () { show(current - 1); });
+      nextBtn.addEventListener('click', function () { show(current + 1); });
 
-<footer>
-  <p class="foot-note">Updated 2026. Built as a static page, deployable via GitHub Pages.</p>
-</footer>
-
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" type="button">CLOSE ✕</button>
-  <button class="lightbox-nav prev" id="lightboxPrev" type="button" aria-label="Previous image">‹</button>
-  <img id="lightboxImg" src="" alt="">
-  <button class="lightbox-nav next" id="lightboxNext" type="button" aria-label="Next image">›</button>
-  <div class="lightbox-caption" id="lightboxCaption"></div>
-</div>
-
-<script>
-(function(){
-  var root = document.documentElement;
-  var btn = document.getElementById('themeToggle');
-
-  syncButton();
-
-  btn.addEventListener('click', function(){
-    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    if(next === 'dark'){ root.setAttribute('data-theme', 'dark'); }
-    else{ root.removeAttribute('data-theme'); }
-    try { localStorage.setItem('theme', next); } catch(e) {}
-    syncButton();
-  });
-
-  function syncButton(){
-    btn.textContent = root.getAttribute('data-theme') === 'dark' ? 'LIGHT' : 'DARK';
-  }
-})();
-
-(function(){
-  var lightbox = document.getElementById('lightbox');
-  var lightboxImg = document.getElementById('lightboxImg');
-  var lightboxCaption = document.getElementById('lightboxCaption');
-  var closeBtn = document.getElementById('lightboxClose');
-  var prevBtn = document.getElementById('lightboxPrev');
-  var nextBtn = document.getElementById('lightboxNext');
-
-  // Build a deduplicated, ordered list from the gallery (it contains
-  // the image set twice, back to back, for the seamless marquee loop).
-  var items = [];
-  var seen = {};
-  document.querySelectorAll('.gallery-frame img').forEach(function(img){
-    if(!seen[img.src]){
-      seen[img.src] = true;
-      var caption = img.closest('.gallery-frame').querySelector('.gallery-caption');
-      items.push({ src: img.src, alt: img.alt, caption: caption ? caption.textContent : '' });
-    }
-  });
-
-  var current = 0;
-
-  function show(index){
-    current = (index + items.length) % items.length;
-    var item = items[current];
-    lightboxImg.src = item.src;
-    lightboxImg.alt = item.alt;
-    lightboxCaption.textContent = item.caption;
-  }
-
-  document.querySelectorAll('.gallery-frame img').forEach(function(img){
-    img.addEventListener('click', function(){
-      var index = items.findIndex(function(it){ return it.src === img.src; });
-      show(index);
-      lightbox.classList.add('open');
-    });
-  });
-
-  function closeLightbox(){ lightbox.classList.remove('open'); lightboxImg.src=''; }
-
-  closeBtn.addEventListener('click', closeLightbox);
-  prevBtn.addEventListener('click', function(){ show(current - 1); });
-  nextBtn.addEventListener('click', function(){ show(current + 1); });
-
-  lightbox.addEventListener('click', function(e){
-    if(e.target === lightbox){ closeLightbox(); }
-  });
-  document.addEventListener('keydown', function(e){
-    if(!lightbox.classList.contains('open')) return;
-    if(e.key === 'Escape'){ closeLightbox(); }
-    if(e.key === 'ArrowLeft'){ show(current - 1); }
-    if(e.key === 'ArrowRight'){ show(current + 1); }
-  });
-})();
-</script>
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) { closeLightbox(); }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') { closeLightbox(); }
+        if (e.key === 'ArrowLeft') { show(current - 1); }
+        if (e.key === 'ArrowRight') { show(current + 1); }
+      });
+    })();
+  </script>
 </body>
+
 </html>
