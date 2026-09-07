@@ -999,7 +999,6 @@
             <div class="gallery-caption">Edit inventory item</div>
           </div>
           <!-- duplicate set for a seamless loop -->
-          ...
           <div class="gallery-frame">
             <div class="frame-plate">
               <img src="gallery/whitemode.png" alt="Light mode screenshot" loading="lazy">
@@ -1019,55 +1018,46 @@
       <div class="exhibit">
         <div class="exhibit-top">
           <h3 class="exhibit-title">Asset Manager</h3>
-          <p class="exhibit-desc">An IT asset management system that tracks company hardware and which employee it is
-            assigned to, built as an ASP.NET Core Web API with an Angular front end.</p>
+          <p class="exhibit-desc">A full-stack IT asset management system: track company hardware, assign it to
+            employees, manage inventory stock, and see a full audit trail of every change — all behind JWT-secured
+            login. Built as an ASP.NET Core Web API with an Angular + Material front end.</p>
         </div>
 
-        <div class="mock">
-          <div class="mock-side">
-            <div class="active">Dashboard</div>
-            <div>Assets</div>
-            <div>Employees</div>
-            <div>Assignments</div>
-            <div>Users</div>
-          </div>
-          <div class="mock-main">
-            <table class="mock-table">
-              <tr>
-                <th>Asset</th>
-                <th>Tag</th>
-                <th>Assigned to</th>
-                <th>Status</th>
-              </tr>
-              <tr>
-                <td>Laptop</td>
-                <td>LAP-0231</td>
-                <td>Employee A</td>
-                <td><span class="pill assigned">assigned</span></td>
-              </tr>
-              <tr>
-                <td>Mouse</td>
-                <td>PRF-0119</td>
-                <td>Unassigned</td>
-                <td><span class="pill stock">in stock</span></td>
-              </tr>
-              <tr>
-                <td>Phone</td>
-                <td>MOB-0087</td>
-                <td>Employee B</td>
-                <td><span class="pill assigned">assigned</span></td>
-              </tr>
-            </table>
-          </div>
-        </div>
+      <div class="mock">
+  <div class="mock-side">
+    <div class="active">Assets</div>
+    <div>Employees</div>
+    <div>Inventory</div>
+    <div>Activity log</div>
+    <div>Login</div>
+  </div>
+  <div class="mock-main">
+    <table class="mock-table">
+      <tr><th>Asset</th><th>Serial</th><th>Assigned to</th><th>Status</th></tr>
+      <tr><td>Dell Latitude 5420</td><td>SN-001234</td><td>Anna Kovács</td><td><span class="pill assigned">assigned</span></td></tr>
+      <tr><td>Logitech M185</td><td>MOU-LOG-001</td><td>Unassigned</td><td><span class="pill stock">in stock</span></td></tr>
+      <tr>
+    <td colspan="4">Anna Kovács assigned Dell Latitude 5420</td>
+  </tr>
+
+  <tr>
+    <td colspan="4">your.email@company.com · ••••••••</td>
+  </tr>
+</table>
+</div>
         <p
           style="font-family:var(--mono); font-size:10.5px; color:var(--ink-soft); padding:8px 28px; margin:0; border-bottom:1px solid var(--line);">
-          Illustrative concept of the asset/assignment structure, not a screenshot of the live app.</p>
+          Illustrative concept of the asset/assignment structure — see the gallery above for real screenshots.</p>
 
         <ul class="feature-list">
-          <li>ASP.NET Core Web API backend</li>
-          <li>Angular front end</li>
-          <li>Tracks IT assets and which employee each one is assigned to</li>
+          <li>JWT authentication — register/login, hashed passwords (BCrypt), protected routes on both frontend and
+            backend</li>
+          <li>Full CRUD for Assets, Employees, and Inventory, each with its own data model</li>
+          <li>Assign/return workflow with a complete assignment history log per asset</li>
+          <li>Activity log panel — a slide-out audit trail showing who did what and when</li>
+          <li>Light &amp; dark mode with an animated theme toggle and saved preference</li>
+          <li>REST API documented and testable via Swagger / OpenAPI</li>
+          <li>SQL Server database via Entity Framework Core, with migrations</li>
           <li>Organised as separate API and UI projects in the same repository</li>
         </ul>
 
@@ -1076,6 +1066,9 @@
             <span class="chip">ASP.NET Core</span>
             <span class="chip">Angular</span>
             <span class="chip">C#</span>
+            <span class="chip">Entity Framework Core</span>
+            <span class="chip">SQL Server</span>
+            <span class="chip">JWT Auth</span>
             <span class="chip">REST API</span>
           </div>
           <a class="repo-link" href="https://github.com/TSzabo1222/AssetManager.Api" target="_blank" rel="noopener">View
