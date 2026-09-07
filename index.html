@@ -342,8 +342,13 @@
     }
 
     .mock-side div {
-      padding: 6px 0;
+      padding: 8px 0;
       opacity: .85;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .mock-side div:last-child {
+      border-bottom: none;
     }
 
     .mock-side .active {
@@ -353,11 +358,15 @@
 
     .mock-main {
       padding: 16px 18px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     .mock-table {
       width: 100%;
+      min-width: 480px;
       border-collapse: collapse;
+      table-layout: auto;
     }
 
     .mock-table th {
@@ -365,14 +374,16 @@
       font-weight: 600;
       color: var(--ink-soft);
       border-bottom: 1px solid var(--line);
-      padding: 6px 8px;
+      padding: 6px 12px;
       font-size: 11px;
+      white-space: nowrap;
     }
 
     .mock-table td {
-      padding: 7px 8px;
+      padding: 7px 12px;
       border-bottom: 1px solid #EDEBE2;
       color: var(--ink);
+      white-space: nowrap;
     }
 
     .pill {
@@ -1051,49 +1062,47 @@
                 <td>Unassigned</td>
                 <td><span class="pill stock">in stock</span></td>
               </tr>
-                 
-                  <tr>
-                    <td colspan="4">Anna Kovács assigned Dell Latitude 5420</td>
-                  </tr>
-
-                  <tr>
-                    <td colspan="4">your.email@company.com  Password:  ••••••••</td>
-                   
-                  </tr>
-                </table>
-              </div>
-          </div>
-          <p
-            style="font-family:var(--mono); font-size:10.5px; color:var(--ink-soft); padding:8px 28px; margin:0; border-bottom:1px solid var(--line);">
-            Illustrative concept of the asset/assignment structure — see the gallery above for real screenshots.</p>
-
-          <ul class="feature-list">
-            <li>JWT authentication — register/login, hashed passwords (BCrypt), protected routes on both frontend and
-              backend</li>
-            <li>Full CRUD for Assets, Employees, and Inventory, each with its own data model</li>
-            <li>Assign/return workflow with a complete assignment history log per asset</li>
-            <li>Activity log panel — a slide-out audit trail showing who did what and when</li>
-            <li>Light &amp; dark mode with an animated theme toggle and saved preference</li>
-            <li>REST API documented and testable via Swagger / OpenAPI</li>
-            <li>SQL Server database via Entity Framework Core, with migrations</li>
-            <li>Organised as separate API and UI projects in the same repository</li>
-          </ul>
-
-          <div class="exhibit-bottom">
-            <div class="stack">
-              <span class="chip">ASP.NET Core</span>
-              <span class="chip">Angular</span>
-              <span class="chip">C#</span>
-              <span class="chip">Entity Framework Core</span>
-              <span class="chip">SQL Server</span>
-              <span class="chip">JWT Auth</span>
-              <span class="chip">REST API</span>
-            </div>
-            <a class="repo-link" href="https://github.com/TSzabo1222/AssetManager.Api" target="_blank"
-              rel="noopener">View
-              source on GitHub</a>
+            </table>
+            <p style="margin:14px 0 0; padding-top:12px; padding-bottom:10px; border-top:1px dotted var(--line); border-bottom:1px dotted var(--line); color:var(--ink-soft);">
+              Anna Kovács assigned Dell Latitude 5420
+            </p>
+            <p style="margin:0; padding-top:10px; color:var(--ink-soft);">
+              your.email@company.com&nbsp;&nbsp;·&nbsp;&nbsp;Password: ••••••••
+            </p>
           </div>
         </div>
+
+        <p
+          style="font-family:var(--mono); font-size:10.5px; color:var(--ink-soft); padding:8px 28px; margin:0; border-bottom:1px solid var(--line);">
+          Illustrative concept of the asset/assignment structure — see the gallery above for real screenshots.</p>
+
+        <ul class="feature-list">
+          <li>JWT authentication — register/login, hashed passwords (BCrypt), protected routes on both frontend and
+            backend</li>
+          <li>Full CRUD for Assets, Employees, and Inventory, each with its own data model</li>
+          <li>Assign/return workflow with a complete assignment history log per asset</li>
+          <li>Activity log panel — a slide-out audit trail showing who did what and when</li>
+          <li>Light &amp; dark mode with an animated theme toggle and saved preference</li>
+          <li>REST API documented and testable via Swagger / OpenAPI</li>
+          <li>SQL Server database via Entity Framework Core, with migrations</li>
+          <li>Organised as separate API and UI projects in the same repository</li>
+        </ul>
+
+        <div class="exhibit-bottom">
+          <div class="stack">
+            <span class="chip">ASP.NET Core</span>
+            <span class="chip">Angular</span>
+            <span class="chip">C#</span>
+            <span class="chip">Entity Framework Core</span>
+            <span class="chip">SQL Server</span>
+            <span class="chip">JWT Auth</span>
+            <span class="chip">REST API</span>
+          </div>
+          <a class="repo-link" href="https://github.com/TSzabo1222/AssetManager.Api" target="_blank"
+            rel="noopener">View
+            source on GitHub</a>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
